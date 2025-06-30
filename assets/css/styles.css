@@ -491,15 +491,24 @@ img {
     width: 85%;
 }
 .skills__mysql {
-    width: 80%;
+    width: 90%;
 }
 .skills__react {
-    width: 50%;
-}
-.skills__git {
     width: 75%;
 }
+.skills__git {
+    width: 85%;
+}
+.skills__css {
+    width: 80%;
+}
 .skills__dsa {
+    width: 80%;
+}
+.skills__js {
+    width: 85%;
+}
+.skills__html {
     width: 80%;
 }
 
