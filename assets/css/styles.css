@@ -302,6 +302,9 @@ img {
 .skills__ux {
   width: 85%;
 }
+.skills__bootstrap {
+  width: 80%;
+}
 .skills__img {
   border-radius: 0.5rem;
 }
