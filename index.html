@@ -4,23 +4,82 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- ===== SEO META ===== -->
+    <title>Nandhakumar M | Software Developer — Java & Spring Boot</title>
+    <meta
+      name="description"
+      content="Nandhakumar M — Software Developer at Cloudstier Solutions. Building scalable web applications with Java, Spring Boot, React, MySQL, and PostgreSQL."
+    />
+    <meta
+      name="keywords"
+      content="Nandhakumar M, Software Developer, Java Developer, Spring Boot, Backend Developer, React, Node.js, REST API, MySQL, PostgreSQL, Portfolio"
+    />
+    <meta name="author" content="Nandhakumar M" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2563eb" />
 
-    <!-- =====BOX ICONS===== -->
+    <!-- ===== OPEN GRAPH / SOCIAL ===== -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Nandhakumar M | Software Developer — Java & Spring Boot"
+    />
+    <meta
+      property="og:description"
+      content="Building scalable web applications with Spring Boot, React, MySQL, PostgreSQL, and modern web technologies."
+    />
+    <meta property="og:image" content="assets/img/Portfolio.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="canonical" href="https://github.com/NandhaCode54" />
+
+    <!-- ===== BOX ICONS ===== -->
     <link
-      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-    <title>Portfolio website</title>
+    <!-- ===== STYLES (loaded last so our rules win) ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- ===== STRUCTURED DATA (SEO) ===== -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nandhakumar M",
+        "jobTitle": "Software Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Cloudstier Solutions Pvt. Ltd.",
+          "url": "https://www.cloudstier.com",
+          "sameAs": "https://www.linkedin.com/company/cloudstier-solutions/"
+        },
+        "alumniOf": "Anna University",
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "Node.js",
+          "REST APIs",
+          "MySQL",
+          "PostgreSQL"
+        ],
+        "url": "https://github.com/NandhaCode54",
+        "sameAs": [
+          "https://www.linkedin.com/in/nandha54/",
+          "https://github.com/NandhaCode54"
+        ]
+      }
+    </script>
   </head>
   <body>
     <!--===== HEADER =====-->
-    <header class="l-header">
+    <header class="header" id="header">
       <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Nandha_M</a>
-        </div>
+        <a href="#home" class="nav__logo">Nandhakumar<span>.</span></a>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
@@ -34,379 +93,673 @@
               <a href="#skills" class="nav__link">Skills</a>
             </li>
             <li class="nav__item">
-              <a href="#work" class="nav__link">Work</a>
+              <a href="#experience" class="nav__link">Experience</a>
+            </li>
+            <li class="nav__item">
+              <a href="#work" class="nav__link">Projects</a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
+          <i class="bx bx-x nav__close" id="nav-close"></i>
         </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="bx bx-menu"></i>
+        <div class="nav__actions">
+          <button
+            class="nav__theme"
+            id="theme-toggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="bx bx-moon"></i>
+          </button>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-menu"></i>
+          </div>
         </div>
       </nav>
     </header>
 
     <main class="l-main">
       <!--===== HOME =====-->
-      <section class="home bd-grid" id="home">
-        <div class="home__data">
-          <h1 class="home__title">
-            Hi,<br />I'am <span class="home__title-color">Nandhakumar</span
-            ><br />
-            Software Developer
-          </h1>
+      <section class="home" id="home">
+        <div class="home__container bd-grid">
+          <div class="home__data">
+            <span class="home__greeting">👋 Hi, I'm</span>
+            <h1 class="home__title">
+              Nandhakumar M
+            </h1>
+            <h3 class="home__subtitle">
+              Software Developer <span class="home__sep">|</span> Java &amp;
+              Spring Boot Developer
+            </h3>
+            <p class="home__description">
+              Building scalable web applications with Spring Boot, React, MySQL,
+              PostgreSQL, and modern web technologies. Currently working at
+              <a
+                href="https://www.linkedin.com/company/cloudstier-solutions/"
+                target="_blank"
+                rel="noopener"
+                class="text-link"
+                ><strong>Cloudstier Solutions</strong></a
+              >.
+            </p>
 
-          <a href="#contact" class="button">Contact</a>
+            <div class="home__buttons">
+              <a href="#contact" class="button">
+                Contact Me <i class="bx bx-send"></i>
+              </a>
+              <a
+                href="assets/Nandha_CV.pdf"
+                class="button button--ghost"
+                download
+              >
+                Resume <i class="bx bx-download"></i>
+              </a>
+            </div>
 
-          <a href="assets/Nandha_CV.pdf" class="button" download
-            >Download Resume</a
-          >
+            <div class="home__social">
+              <a
+                href="https://github.com/NandhaCode54"
+                target="_blank"
+                rel="noopener"
+                class="home__social-icon"
+                aria-label="GitHub"
+                ><i class="bx bxl-github"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/nandha54/"
+                target="_blank"
+                rel="noopener"
+                class="home__social-icon"
+                aria-label="LinkedIn"
+                ><i class="bx bxl-linkedin"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@_NANDHAKUMARM"
+                target="_blank"
+                rel="noopener"
+                class="home__social-icon"
+                aria-label="YouTube"
+                ><i class="bx bxl-youtube"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="home__img">
+            <div class="home__blob-wrapper">
+              <img
+                src="assets/img/profile.png"
+                alt="Nandhakumar M — Software Developer"
+                class="home__photo"
+              />
+            </div>
+          </div>
         </div>
 
-        <div class="home__social">
-          <a
-            href="https://www.linkedin.com/in/nandha54/"
-            target="_blank"
-            class="home__social-icon"
-            ><i class="bx bxl-linkedin"></i
-          ></a>
-          <a
-            href="https://www.youtube.com/@_NANDHAKUMARM"
-            target="_blank"
-            class="home__social-icon"
-            ><i class="bx bxl-youtube"></i
-          ></a>
-          <a
-            href="https://github.com/NandhaCode54"
-            target="_blank"
-            class="home__social-icon"
-            ><i class="bx bxl-github"></i
-          ></a>
-        </div>
-
-        <div class="home__img">
-          <svg
-            class="home__blob"
-            viewBox="0 0 479 467"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <mask id="mask0" mask-type="alpha">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-            </mask>
-            <g mask="url(#mask0)">
-              <path
-                d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"
-              />
-              <image
-                class="home__blob-img"
-                x="50"
-                y="60"
-                href="assets/img/profile.png"
-              />
-            </g>
-          </svg>
+        <!--===== STATS =====-->
+        <div class="stats bd-grid">
+          <div class="stats__card">
+            <h2 class="stats__number" data-target="2">0</h2>
+            <span class="stats__label">Years of Learning</span>
+          </div>
+          <div class="stats__card">
+            <h2 class="stats__number" data-target="5" data-suffix="+">0</h2>
+            <span class="stats__label">Projects Completed</span>
+          </div>
+          <div class="stats__card">
+            <h2 class="stats__number" data-target="20" data-suffix="+">0</h2>
+            <span class="stats__label">Technologies Used</span>
+          </div>
+          <div class="stats__card">
+            <h2 class="stats__number" data-target="100" data-suffix="%">0</h2>
+            <span class="stats__label">Commitment</span>
+          </div>
         </div>
       </section>
 
       <!--===== ABOUT =====-->
       <section class="about section" id="about">
+        <span class="section-subtitle">Get To Know</span>
         <h2 class="section-title">About Me</h2>
 
         <div class="about__container bd-grid">
           <div class="about__img">
-            <img src="assets/img/about.png" alt="Profile Image" />
+            <img src="assets/img/about.png" alt="Nandhakumar M" />
           </div>
 
-          <div>
-            <h2 class="about__subtitle">I'm Nandha Kumar</h2>
+          <div class="about__data">
+            <h3 class="about__heading">Passionate Software Developer</h3>
             <p class="about__text">
-              A passionate Software Developer with strong skills in Java, Spring
-              Boot, MySQL, and front-end technologies like HTML, CSS,
-              JavaScript, and Bootstrap. I enjoy building robust backend systems
-              and clean user interfaces. I have hands-on experience in creating
-              real-world projects like an E-Commerce API and an Employee
-              Management System using Spring Boot and MySQL. Always eager to
-              learn and grow in the world of technology, I’m ready to take on
-              new challenges and contribute to innovative teams.
+              I'm a passionate Software Developer with a B.Tech in Information
+              Technology from <strong>Anna University</strong>. I specialize in
+              Java, Spring Boot, React, Node.js, and database-driven application
+              development.
             </p>
+            <p class="about__text">
+              Currently at
+              <a
+                href="https://www.linkedin.com/company/cloudstier-solutions/"
+                target="_blank"
+                rel="noopener"
+                class="text-link"
+                ><strong>Cloudstier Solutions</strong></a
+              >, I contribute to developing scalable web applications, REST APIs,
+              and enterprise software solutions. I enjoy solving complex
+              problems,
+              designing efficient backend systems, and building user-friendly
+              applications — while continuously learning software architecture,
+              cloud technologies, and best development practices.
+            </p>
+
+            <ul class="about__info">
+              <li>
+                <i class="bx bx-briefcase-alt"></i>
+                <span><strong>Role:</strong> Software Developer</span>
+              </li>
+              <li>
+                <i class="bx bx-buildings"></i>
+                <span
+                  ><strong>Company:</strong>
+                  <a
+                    href="https://www.linkedin.com/company/cloudstier-solutions/"
+                    target="_blank"
+                    rel="noopener"
+                    class="text-link"
+                    >Cloudstier Solutions</a
+                  ></span
+                >
+              </li>
+              <li>
+                <i class="bx bx-graduation"></i>
+                <span
+                  ><strong>Education:</strong> B.Tech IT, Anna University,
+                  Trichy (2024)</span
+                >
+              </li>
+              <li>
+                <i class="bx bx-map"></i>
+                <span><strong>Location:</strong> Tirupattur, Tamil Nadu</span>
+              </li>
+            </ul>
+
+            <a href="assets/Nandha_CV.pdf" class="button" download>
+              Download Resume <i class="bx bx-download"></i>
+            </a>
           </div>
         </div>
       </section>
 
       <!--===== SKILLS =====-->
       <section class="skills section" id="skills">
-        <h2 class="section-title">Skills</h2>
+        <span class="section-subtitle">What I Work With</span>
+        <h2 class="section-title">Technical Skills</h2>
 
         <div class="skills__container bd-grid">
-          <!-- Skill text and progress bars -->
-          <div>
-            <h2 class="skills__subtitle">Tech Stack</h2>
-            <p class="skills__text">
-              I focus on backend development with Java and Spring Boot, and I'm
-              steadily growing my frontend capabilities with modern web
-              technologies.
-            </p>
-
-            <!-- Backend Development -->
-            <h3 class="skills__group-title">Backend Development</h3>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code-alt skills__icon"></i>
-                <span class="skills__name">Java</span>
-              </div>
-              <div class="skills__bar skills__java"></div>
-              <div><span class="skills__percentage">90%</span></div>
+          <!-- Languages -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-code-alt"></i>
+              <h3 class="skills__group-title">Languages</h3>
             </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-server skills__icon"></i>
-                <span class="skills__name">Spring Boot</span>
-              </div>
-              <div class="skills__bar skills__springboot"></div>
-              <div><span class="skills__percentage">85%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-data skills__icon"></i>
-                <span class="skills__name">MySQL</span>
-              </div>
-              <div class="skills__bar skills__mysql"></div>
-              <div><span class="skills__percentage">90%</span></div>
-            </div>
-
-            <!-- Frontend Development -->
-            <h3 class="skills__group-title">Frontend Development</h3>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name">HTML5</span>
-              </div>
-              <div class="skills__bar skills__html"></div>
-              <div><span class="skills__percentage">80%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-css3 skills__icon"></i>
-                <span class="skills__name">CSS3</span>
-              </div>
-              <div class="skills__bar skills__css"></div>
-              <div><span class="skills__percentage">80%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-javascript skills__icon"></i>
-                <span class="skills__name">JavaScript</span>
-              </div>
-              <div class="skills__bar skills__js"></div>
-              <div><span class="skills__percentage">85%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-html5 skills__icon"></i>
-                <span class="skills__name">Bootstrap</span>
-              </div>
-              <div class="skills__bar skills__bootstrap"></div>
-              <div><span class="skills__percentage">80%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bxl-react skills__icon"></i>
-                <span class="skills__name">React</span>
-              </div>
-              <div class="skills__bar skills__react"></div>
-              <div><span class="skills__percentage">75%</span></div>
-            </div>
-
-            <!-- Other Skills -->
-            <h3 class="skills__group-title">Tools & CS Fundamentals</h3>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-git-branch skills__icon"></i>
-                <span class="skills__name">Git & GitHub</span>
-              </div>
-              <div class="skills__bar skills__git"></div>
-              <div><span class="skills__percentage">85%</span></div>
-            </div>
-
-            <div class="skills__data">
-              <div class="skills__names">
-                <i class="bx bx-code-curly skills__icon"></i>
-                <span class="skills__name">Data Structures & Algorithms</span>
-              </div>
-              <div class="skills__bar skills__dsa"></div>
-              <div><span class="skills__percentage">80%</span></div>
+            <div class="skills__list">
+              <span class="skills__chip">Java</span>
+              <span class="skills__chip">JavaScript</span>
+              <span class="skills__chip">TypeScript</span>
+              <span class="skills__chip">SQL</span>
+              <span class="skills__chip">Python</span>
+              <span class="skills__chip">C++</span>
+              <span class="skills__chip">PHP</span>
             </div>
           </div>
 
-          <!-- Skill image -->
-          <div>
-            <img
-              src="assets/img/skills.webp"
-              alt="Skills illustration"
-              class="skills__img"
-            />
+          <!-- Backend -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-server"></i>
+              <h3 class="skills__group-title">Backend</h3>
+            </div>
+            <div class="skills__list">
+              <span class="skills__chip">Spring Boot</span>
+              <span class="skills__chip">Spring Data JPA</span>
+              <span class="skills__chip">Hibernate</span>
+              <span class="skills__chip">REST APIs</span>
+              <span class="skills__chip">JWT Auth</span>
+              <span class="skills__chip">Node.js</span>
+              <span class="skills__chip">Express.js</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-window-alt"></i>
+              <h3 class="skills__group-title">Frontend</h3>
+            </div>
+            <div class="skills__list">
+              <span class="skills__chip">React.js</span>
+              <span class="skills__chip">Vite</span>
+              <span class="skills__chip">HTML5</span>
+              <span class="skills__chip">CSS3</span>
+              <span class="skills__chip">Bootstrap</span>
+              <span class="skills__chip">Tailwind CSS</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-data"></i>
+              <h3 class="skills__group-title">Databases</h3>
+            </div>
+            <div class="skills__list">
+              <span class="skills__chip">MySQL</span>
+              <span class="skills__chip">PostgreSQL</span>
+              <span class="skills__chip">MongoDB</span>
+              <span class="skills__chip">Prisma ORM</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-wrench"></i>
+              <h3 class="skills__group-title">Tools &amp; Tech</h3>
+            </div>
+            <div class="skills__list">
+              <span class="skills__chip">Git</span>
+              <span class="skills__chip">GitHub</span>
+              <span class="skills__chip">Docker</span>
+              <span class="skills__chip">Maven</span>
+              <span class="skills__chip">Postman</span>
+              <span class="skills__chip">VS Code</span>
+              <span class="skills__chip">IntelliJ IDEA</span>
+              <span class="skills__chip">Linux</span>
+            </div>
+          </div>
+
+          <!-- Core Competencies -->
+          <div class="skills__group">
+            <div class="skills__header">
+              <i class="bx bx-bulb"></i>
+              <h3 class="skills__group-title">Core Competencies</h3>
+            </div>
+            <div class="skills__list">
+              <span class="skills__chip">DSA</span>
+              <span class="skills__chip">OOP</span>
+              <span class="skills__chip">Problem Solving</span>
+              <span class="skills__chip">SDLC</span>
+              <span class="skills__chip">API Development</span>
+              <span class="skills__chip">Database Design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--===== EXPERIENCE =====-->
+      <section class="experience section" id="experience">
+        <span class="section-subtitle">My Journey</span>
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline bd-grid">
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">May 2026 – Present</span>
+              <h3 class="timeline__role">Software Developer</h3>
+              <span class="timeline__company">
+                <i class="bx bx-buildings"></i>
+                <a
+                  href="https://www.linkedin.com/company/cloudstier-solutions/"
+                  target="_blank"
+                  rel="noopener"
+                  class="text-link"
+                  >Cloudstier Solutions Pvt. Ltd.</a
+                >
+                <span class="timeline__location">· Tirupattur, Tamil Nadu</span>
+              </span>
+              <ul class="timeline__list">
+                <li>
+                  Developing and maintaining full-stack web applications using
+                  Spring Boot, React, and MySQL/PostgreSQL.
+                </li>
+                <li>
+                  Designing and implementing secure RESTful APIs with JWT
+                  Authentication.
+                </li>
+                <li>
+                  Working with database design, optimization, and ORM frameworks
+                  including Hibernate and Prisma.
+                </li>
+                <li>
+                  Collaborating with development teams to build scalable and
+                  maintainable software solutions.
+                </li>
+                <li>
+                  Participating in debugging, testing, deployment, and
+                  performance optimization.
+                </li>
+                <li>
+                  Using Git and GitHub for version control and collaborative
+                  development.
+                </li>
+                <li>
+                  Contributing to CRM, subscription management, and business
+                  automation projects.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__content">
+              <span class="timeline__date">2020 – 2024</span>
+              <h3 class="timeline__role">B.Tech, Information Technology</h3>
+              <span class="timeline__company">
+                <i class="bx bx-graduation"></i> Anna University, Trichy
+                <span class="timeline__location">· CGPA: 7.82</span>
+              </span>
+              <ul class="timeline__list">
+                <li>
+                  Core coursework: Data Structures &amp; Algorithms, Database
+                  Management Systems, Operating Systems, Computer Networks, and
+                  Object-Oriented Programming.
+                </li>
+                <li>
+                  Completed a Java Full Stack certification (Besant
+                  Technologies) and built full-stack main projects with Java,
+                  Spring Boot, React.js, and MySQL.
+                </li>
+                <li>
+                  Solved 300+ Data Structures &amp; Algorithm problems on
+                  GeeksforGeeks.
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       <!--===== WORK =====-->
       <section class="work section" id="work">
-        <h2 class="section-title">My Projects</h2>
+        <span class="section-subtitle">Recent Work</span>
+        <h2 class="section-title">Featured Projects</h2>
 
         <div class="work__container bd-grid">
-          <!-- Project 1 -->
-          <div class="project__card">
-            <img
-              src="assets/img/ems.png"
-              alt="Employee Management System"
-              class="work__img"
-            />
-            <h3 class="project__title">Employee Management System</h3>
-            <p class="project__desc">
-              A CRUD-based web application built using Java, Spring Boot, and
-              MySQL that allows administrators to manage employee records
-              efficiently.
-            </p>
-            <a
-              href="https://github.com/NandhaCode54/Employee-Management-System"
-              target="_blank"
-              class="project__link"
-              >View on GitHub</a
-            >
-          </div>
+          <!-- Project: E-Commerce (main project) -->
+          <article class="project__card">
+            <div class="project__img-wrap project__img-wrap--placeholder">
+              <i class="bx bx-cart-alt"></i>
+            </div>
+            <div class="project__body">
+              <span class="project__badge">Main Project</span>
+              <h3 class="project__title">E-Commerce Website</h3>
+              <p class="project__desc">
+                A full-stack e-commerce platform where users browse products,
+                manage a cart, and complete purchases — with user
+                authentication, product management, order tracking, and
+                payment-gateway integration.
+              </p>
+              <div class="project__tags">
+                <span>Java</span><span>Spring Boot</span><span>MySQL</span
+                ><span>React.js</span><span>REST APIs</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Project: Employee Management System (main project) -->
+          <article class="project__card">
+            <div class="project__img-wrap">
+              <img
+                src="assets/img/ems.png"
+                alt="Employee Management System"
+                class="project__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <span class="project__badge">Main Project</span>
+              <h3 class="project__title">Employee Management System</h3>
+              <p class="project__desc">
+                An HR system to manage employee records, attendance, and
+                payroll — featuring role-based access control, data validation,
+                reporting, and optimized database performance for scalability.
+              </p>
+              <div class="project__tags">
+                <span>Java</span><span>Spring Boot</span><span>MySQL</span
+                ><span>React.js</span><span>REST APIs</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54/Employee-Management-System"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
 
           <!-- Project 2 -->
-          <div class="project__card">
-            <img
-              src="assets/img/blog-app.png"
-              alt="Blog App"
-              class="work__img"
-            />
-            <h3 class="project__title">Blog App</h3>
-            <p class="project__desc">
-              A full-stack blog platform built using Spring Boot, MySQL, and
-              React, allowing users to register, log in, create, and view posts
-              with a simple and responsive interface.
-            </p>
-            <a
-              href="https://github.com/NandhaCode54/blog-app"
-              target="_blank"
-              class="project__link"
-              >View on GitHub</a
-            >
-          </div>
-
-          <!-- Project 5 -->
-          <div class="project__card">
-            <img
-              src="assets/img/lungcancer.png"
-              alt="Lung Cancer Detection"
-              class="work__img"
-            />
-            <h3 class="project__title">Lung Cancer Detection</h3>
-            <p class="project__desc">
-              A machine learning project using image data and OpenCV to detect
-              lung cancer with SVM and Logistic Regression models.
-            </p>
-            <a
-              href="https://github.com/NandhaCode54/lung-cancer-detection"
-              target="_blank"
-              class="project__link"
-              >View on GitHub</a
-            >
-          </div>
+          <article class="project__card">
+            <div class="project__img-wrap">
+              <img
+                src="assets/img/blog-app.png"
+                alt="Blog App"
+                class="project__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Full-Stack Blog App</h3>
+              <p class="project__desc">
+                A blog platform where users can register, log in, and create or
+                view posts through a responsive interface.
+              </p>
+              <div class="project__tags">
+                <span>Spring Boot</span><span>React</span><span>MySQL</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54/blog-app"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
 
           <!-- Project 3 -->
-          <div class="project__card">
-            <img
-              src="assets/img/weather.png"
-              alt="Weather App"
-              class="work__img"
-            />
-            <h3 class="project__title">Weather App</h3>
-            <p class="project__desc">
-              A simple and responsive weather application built using HTML, CSS,
-              and JavaScript that fetches real-time weather data from an
-              external API.
-            </p>
-            <a
-              href="https://github.com/NandhaCode54/weather-app"
-              target="_blank"
-              class="project__link"
-              >View on GitHub</a
-            >
-          </div>
+          <article class="project__card">
+            <div class="project__img-wrap">
+              <img
+                src="assets/img/lungcancer.png"
+                alt="Lung Cancer Detection"
+                class="project__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Lung Cancer Detection</h3>
+              <p class="project__desc">
+                A machine learning project using image data and OpenCV with SVM
+                and Logistic Regression models.
+              </p>
+              <div class="project__tags">
+                <span>Python</span><span>OpenCV</span><span>ML</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54/lung-cancer-detection"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
 
-          <!-- project 4 -->
-          <div class="project__card">
-            <img
-              src="assets/img/Portfolio.png"
-              alt="Portfolio Website"
-              class="work__img"
-            />
-            <h3 class="project__title">Portfolio Website</h3>
-            <p class="project__desc">
-              Responsive portfolio built with HTML, CSS, and JavaScript
-              showcasing my projects, skills, and contact info.
-            </p>
+          <!-- Project 4 -->
+          <article class="project__card">
+            <div class="project__img-wrap">
+              <img
+                src="assets/img/weather.png"
+                alt="Weather App"
+                class="project__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Weather App</h3>
+              <p class="project__desc">
+                A responsive weather application that fetches real-time weather
+                data from an external API.
+              </p>
+              <div class="project__tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54/weather-app"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- Project 5 -->
+          <article class="project__card">
+            <div class="project__img-wrap">
+              <img
+                src="assets/img/Portfolio.png"
+                alt="Portfolio Website"
+                class="project__img"
+                loading="lazy"
+              />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Portfolio Website</h3>
+              <p class="project__desc">
+                A responsive portfolio showcasing my projects, skills, and
+                contact information.
+              </p>
+              <div class="project__tags">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <a
+                href="https://github.com/NandhaCode54/portfolio"
+                target="_blank"
+                rel="noopener"
+                class="project__link"
+                >View on GitHub <i class="bx bxl-github"></i
+              ></a>
+            </div>
+          </article>
+
+          <!-- View More -->
+          <article class="project__card project__card--more">
             <a
-              href="https://github.com/NandhaCode54/portfolio"
+              href="https://github.com/NandhaCode54"
               target="_blank"
-              class="project__link"
-              >View on GitHub</a
+              rel="noopener"
+              class="project__more"
             >
-          </div>
+              <i class="bx bxl-github"></i>
+              <h3>More on GitHub</h3>
+              <p>Explore all my repositories and open-source work.</p>
+            </a>
+          </article>
         </div>
       </section>
 
       <!--===== CONTACT =====-->
       <section class="contact section" id="contact">
-        <h2 class="section-title">Contact</h2>
+        <span class="section-subtitle">Get In Touch</span>
+        <h2 class="section-title">Contact Me</h2>
 
         <div class="contact__container bd-grid">
-          <!--===== MY OWN Copy =====-->
-          <!--                    https://formspree.io/forms/xanernzn/integration-->
+          <div class="contact__info">
+            <h3 class="contact__heading">Let's build something together</h3>
+            <p class="contact__text">
+              I'm open to new opportunities, collaborations, and interesting
+              backend / full-stack challenges. Feel free to reach out.
+            </p>
+            <div class="contact__cards">
+              <a
+                href="https://github.com/NandhaCode54"
+                target="_blank"
+                rel="noopener"
+                class="contact__card"
+              >
+                <i class="bx bxl-github"></i>
+                <div>
+                  <span class="contact__card-title">GitHub</span>
+                  <span class="contact__card-data">@NandhaCode54</span>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nandha54/"
+                target="_blank"
+                rel="noopener"
+                class="contact__card"
+              >
+                <i class="bx bxl-linkedin"></i>
+                <div>
+                  <span class="contact__card-title">LinkedIn</span>
+                  <span class="contact__card-data">in/nandha54</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
           <form
             action="https://formspree.io/f/xanernzn"
             method="POST"
             class="contact__form"
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              class="contact__input"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              class="contact__input"
-              required
-            />
-            <textarea
-              name="message"
-              cols="0"
-              rows="10"
-              class="contact__input"
-              required
-            ></textarea>
-            <button type="submit" class="contact__button button">Send</button>
+            <div class="contact__field">
+              <label for="name" class="contact__label">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                class="contact__input"
+                required
+              />
+            </div>
+            <div class="contact__field">
+              <label for="email" class="contact__label">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                class="contact__input"
+                required
+              />
+            </div>
+            <div class="contact__field">
+              <label for="message" class="contact__label">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                placeholder="Tell me about your project or opportunity..."
+                class="contact__input"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="button contact__button">
+              Send Message <i class="bx bx-send"></i>
+            </button>
           </form>
         </div>
       </section>
@@ -414,32 +767,74 @@
 
     <!--==== FOOTER ====-->
     <footer class="footer">
-      <p class="footer__title">Nandha_M</p>
-      <div class="footer__social">
-        <a href="#" target="_blank" class="footer__icon"
-          ><i class="bx bxl-facebook"></i
-        ></a>
-        <a
-          href="https://www.instagram.com/nandha._._m/"
-          target="_blank"
-          class="footer__icon"
-          ><i class="bx bxl-instagram"></i
-        ></a>
-        <a href="https://x.com/m_nandha54" target="_blank" class="footer__icon"
-          ><i class="bx bxl-twitter"></i
-        ></a>
-        <a
-          href="https://www.youtube.com/channel/@_NANDHAKUMARM"
-          class="footer__icon"
-          target="_blank"
-        >
-          <i class="bx bxl-youtube"></i>
-        </a>
+      <div class="footer__container bd-grid">
+        <a href="#home" class="footer__logo">Nandhakumar M</a>
+        <p class="footer__tagline">
+          Software Developer · Java &amp; Spring Boot
+        </p>
+
+        <ul class="footer__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#work">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="footer__social">
+          <a
+            href="https://github.com/NandhaCode54"
+            target="_blank"
+            rel="noopener"
+            class="footer__icon"
+            aria-label="GitHub"
+            ><i class="bx bxl-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/nandha54/"
+            target="_blank"
+            rel="noopener"
+            class="footer__icon"
+            aria-label="LinkedIn"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/nandha._._m/"
+            target="_blank"
+            rel="noopener"
+            class="footer__icon"
+            aria-label="Instagram"
+            ><i class="bx bxl-instagram"></i
+          ></a>
+          <a
+            href="https://x.com/m_nandha54"
+            target="_blank"
+            rel="noopener"
+            class="footer__icon"
+            aria-label="X"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/@_NANDHAKUMARM"
+            target="_blank"
+            rel="noopener"
+            class="footer__icon"
+            aria-label="YouTube"
+            ><i class="bx bxl-youtube"></i
+          ></a>
+        </div>
+
+        <p class="footer__copy">
+          &copy; <span id="footer-year">2026</span> Nandhakumar M. All rights
+          reserved.
+        </p>
       </div>
-      <p class="footer__copy">
-        Created By Nandha_M.&#169; 2026 All rights reserved
-      </p>
     </footer>
+
+    <!--===== SCROLL TOP =====-->
+    <a href="#home" class="scrolltop" id="scroll-top" aria-label="Scroll to top">
+      <i class="bx bx-up-arrow-alt"></i>
+    </a>
 
     <!--===== SCROLL REVEAL =====-->
     <script src="https://unpkg.com/scrollreveal"></script>
